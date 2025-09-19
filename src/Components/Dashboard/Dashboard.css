@@ -1,0 +1,129 @@
+/* ===== Dashboard Layout ===== */
+.dashboard {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background: #f9fafb;
+}
+
+/* ===== Summary Cards ===== */
+.dashboard-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.dashboard-card {
+  background: #fff;
+  padding: 20px;
+  border-radius: 16px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.2s ease;
+}
+
+.dashboard-card:hover {
+  transform: translateY(-4px);
+}
+
+.dashboard-card h3 {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: #444;
+}
+
+.dashboard-card p {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.card-blue p {
+  color: #2563eb;
+}
+.card-red p {
+  color: #ef4444;
+}
+.card-green p {
+  color: #22c55e;
+}
+.card-purple p {
+  color: #9333ea;
+}
+
+/* ===== Charts Section ===== */
+.dashboard-charts {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+@media (min-width: 992px) {
+  .dashboard-charts {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.chart-box {
+  background: #fff;
+  padding: 20px;
+  border-radius: 16px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.chart-box h3 {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+/* ===== Transactions Table ===== */
+.transactions {
+  background: #fff;
+  padding: 20px;
+  border-radius: 16px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.transactions h3 {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.transactions table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.transactions th,
+.transactions td {
+  padding: 12px;
+  border: 1px solid #ddd;
+  text-align: left;
+  font-size: 14px;
+}
+
+.transactions th {
+  background: #f3f4f6;
+  font-weight: 600;
+}
+
+.transactions tr:nth-child(even) {
+  background: #f9fafb;
+}
+
+.transactions .fraud-row {
+  background: #fee2e2;
+}
+
+.transactions .fraud-status {
+  color: #dc2626;
+  font-weight: bold;
+}
+
+.transactions .legit-status {
+  color: #16a34a;
+  font-weight: bold;
+}

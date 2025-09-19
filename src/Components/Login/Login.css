@@ -1,0 +1,123 @@
+.login-container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: url("https://images.unsplash.com/photo-1556742031-c6961e8560b0?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80")
+    no-repeat center center/cover;
+  position: relative;
+}
+
+.login-container::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45); /* Dark overlay for readability */
+}
+
+.login-form {
+  position: relative;
+  z-index: 1;
+  background: #fff;
+  padding: 40px 32px;
+  border-radius: 18px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.15);
+}
+
+
+.login-title {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 16px;
+  color: #222;
+}
+
+.login-underline {
+  width: 60px;
+  height: 4px;
+  background: #3182ce;
+  border-radius: 2px;
+  margin: 0 auto 24px auto;
+}
+
+.login-inputs {
+  margin-bottom: 18px;
+}
+
+.login-input-group {
+  display: flex;
+  align-items: center;
+  margin-bottom: 18px;
+  background: #f7fafc;
+  border-radius: 8px;
+  padding: 0 10px;
+  border: 1px solid #e2e8f0;
+}
+
+.login-input-group img {
+  margin-right: 8px;
+}
+
+.login-input {
+  flex: 1;
+  border: none;
+  background: transparent;
+  padding: 14px 0;
+  font-size: 1rem;
+  outline: none;
+}
+
+.login-forget {
+  font-size: 0.95rem;
+  color: #555;
+  margin-bottom: 18px;
+  text-align: right;
+}
+
+.login-forget span {
+  color: #3182ce;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.login-submit-container {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 18px;
+}
+
+.login-submit {
+  background: #3182ce;
+  color: #fff;
+  padding: 10px 24px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+  user-select: none;
+}
+
+.login-submit.gray {
+  background: #e2e8f0;
+  color: #888;
+  cursor: pointer;
+}
+
+.login-button {
+  width: 100%;
+  padding: 14px 0;
+  background: #48bb78;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  font-size: 1.15rem;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background 0.2s;
+}
+
+.login-button:hover {
+  background: #38a169;
+}

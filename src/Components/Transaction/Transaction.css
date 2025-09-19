@@ -1,0 +1,176 @@
+/* Transaction.css */
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.transaction-container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  /* ✅ Stable Unsplash image */
+  background: 
+    /* linear-gradient(135deg, #2b5876, #4e4376), */
+    url("https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&w=1600&q=80")
+      no-repeat center center / cover;
+      
+  position: relative;
+  padding: 20px;
+}
+
+.transaction-container::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45); /* Dark overlay */
+  z-index: 0; /* ✅ stays behind the form */
+}
+
+.transaction-form {
+  position: relative;
+  z-index: 1; /* ✅ ensures form stays above overlay */
+  background: #fff;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 6px 28px rgba(0,0,0,0.15);
+  max-width: 500px;
+  width: 100%;
+}
+
+
+.transaction-form:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+}
+
+.transaction-title {
+  text-align: center;
+  font-size: 28px;
+  color: #333;
+  margin-bottom: 25px;
+  letter-spacing: 0.5px;
+  font-weight: 700;
+  position: relative;
+}
+
+.transaction-title::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 3px;
+  background: #4a90e2;
+  margin: 10px auto 0 auto;
+  border-radius: 2px;
+}
+
+.transaction-label {
+  display: block;
+  margin-bottom: 15px;
+  font-weight: 500;
+  color: #555;
+}
+
+.transaction-input,
+.transaction-select {
+  width: 100%;
+  padding: 12px 14px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 16px;
+  transition: border 0.3s ease, box-shadow 0.3s ease;
+}
+
+.transaction-input:focus,
+.transaction-select:focus {
+  border-color: #4a90e2;
+  box-shadow: 0 0 6px rgba(74, 144, 226, 0.5);
+  outline: none;
+}
+
+.transaction-button {
+  width: 100%;
+  padding: 14px;
+  background: linear-gradient(135deg, #4a90e2, #357abd);
+  color: #fff;
+  font-size: 18px;
+  font-weight: 600;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-top: 20px;
+  transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.transaction-button:hover {
+  background: linear-gradient(135deg, #357ABD, #2b5fa0);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 14px rgba(0,0,0,0.2);
+}
+
+.transaction-button:active {
+  transform: translateY(0);
+}
+
+/* ============================= */
+/* 📱 Responsive Styles          */
+/* ============================= */
+
+/* Tablets */
+@media (max-width: 768px) {
+  .transaction-form {
+    max-width: 90%;
+    padding: 25px;
+  }
+
+  .transaction-title {
+    font-size: 24px;
+  }
+
+  .transaction-input,
+  .transaction-select {
+    font-size: 15px;
+    padding: 10px 12px;
+  }
+
+  .transaction-button {
+    font-size: 16px;
+    padding: 12px;
+  }
+}
+
+/* Mobile phones */
+@media (max-width: 480px) {
+  .transaction-container {
+    padding: 10px;
+  }
+
+  .transaction-form {
+    max-width: 100%;
+    padding: 20px;
+    border-radius: 12px;
+  }
+
+  .transaction-title {
+    font-size: 20px;
+  }
+
+  .transaction-label {
+    font-size: 14px;
+  }
+
+  .transaction-input,
+  .transaction-select {
+    font-size: 14px;
+    padding: 8px 10px;
+  }
+
+  .transaction-button {
+    font-size: 15px;
+    padding: 10px;
+  }
+}
